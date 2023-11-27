@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac</title>
+    <style>
+        body{
+            transition: all 0.9s ease-in-out;
+            background-color: rgb(110, 107, 107);
+        }
+        h1{
+            text-align: center;
+            /* font-weight: bolder; */
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 5%;
+        }
+        table{
+            border: 1px solid black;
+            width: 400px;
+            height: 100px;
+            margin: 40px 0px;
+        }
+        table td{
+            border: 1px solid red;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+        }
+        .firstUser{
+            background-color: rgb(87, 235, 102);
+            color: rgb(224, 97, 97);
+        }
+        .secondUser{
+            background-color: rgb(224, 97, 97);
+            color: rgb(87, 235, 102);
+        }
+        .alert{
+            color: red;
+        }
+        .inputSec{
+            width: 50%;
+            height: 50px;
+            margin-left: 300px;
+            /* border: 1px solid rgb(0, 0, 0); */
+        }
+        #button{
+            width: 20%;
+            height: 43%;
+            border-radius: 10px;
+            border: transparent;
+            transition: all 0.5s ease-in-out;
+        }
+        #button:hover{
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>TIC TAC</h1>
+    <div class="container" id="container">
+        <div class="inputSec" style="display: inline;" id="inputSec">
+            <input type="text" placeholder="Choose X or 0" id="firstUser">
+            <!-- <input type="text" placeholder="enter X or 0" id="secUser"> -->
+            <button onclick="StartGame()" id="button">START</button>
+            <h4 style="display: none;" id="alert" class="alert">ENTER X OR 0</h4>
+        </div>
+        <div class="tablediv" id="tablediv" style="display: none;">
+            <table id="table">
+                <tr>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                </tr>
+                <tr>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                </tr>
+                <tr>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                    <td onclick="checker(this)"> </td>
+                </tr>
+            </table>
+        </div>
+    </div>    
+    <script src="./cracker.js"></script>
+</body>
+</html>
